@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block head_title %} {{ request.user.first_name }} (Teacher) {% endblock %}
+
+{% block content %} 
+
+<link href="{% static 'css/teacher/basic.css' %}" rel="stylesheet">
+<link href="{% static 'css/table.css' %}" rel="stylesheet">
+
+<div class="menu-container">
+	<div class="title">
+		<h3> Here are your student's top scores </h3>
+	   <style>
+            h3{
+                color: #A9CCE3;
+            }
+       </style>
+
+    </div>
+    <div class="table">
+        <table border="1" style="background-color:#FFFFFF;border-collapse:collapse;border:none;color:#000000;width:100%" cellpadding="3" cellspacing="3" border: none;>
+            <tr>
+                <th>Student Name</th>
+                <th>Rookie Mode</th>
+                <th>Intermediate Mode</th>
+                <th>Master Mode</th>
+            </tr>
+            {% for score in scores %}
+                <tr>
+                    <td>{{ score }}</td>
+                    <td> {{ score.rookie }} </td>
+                    <td> {{ score.intermediate }} </td>
+                    <td> {{ score.master }} </td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+</div>
+
+{% endblock %}

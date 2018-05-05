@@ -1,0 +1,39 @@
+{% load staticfiles %}
+<link href="{% static 'css/navbar-fixed-top.css' %}" rel="stylesheet">
+
+<!-- Static navbar -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <ul class="nav navbar-nav">
+
+      <!--/Left Nav-->
+      {% if user.is_authenticated %}
+
+        {% if 'Teacher' in request.user.groups.all %}
+          <li class="active"><a href="{% url 'teacher.views.Teacher' %}">{{ request.user.first_name }}'s Home (teacher)</a></li>
+        {% else %}
+          <li class="active"><a href="{% url 'student.views.Student' %}">{{ request.user.first_name }}'s Home</a></li>
+        {% endif %}
+
+        <li><a href="{% url 'game.views.PlayHamath' %}">Play Hamath</a></li>
+        <li><a href="{% url 'student.views.GetScores' %}">Get Scores</a></li>
+        <li><a href="{% url 'student.views.HowToPlay' %}">How To Play</a></li>
+      {% else %}
+         <li class="active"><a href="/">Home</a></li>
+        <li><a href="{% url 'hamath.views.About' %}">About</a></li>
+        <li><a href="{% url 'hamath.views.Contact' %}">Contact</a></li>
+      {% endif %}
+    </ul>
+
+    <!--/Right Nav-->
+    <ul class="nav navbar-nav navbar-right">
+      {% if user.is_authenticated %}
+        <li class="active"><a href="{% url 'hamath.views.Logout' %}"> Logout <span class="sr-only">(current)</span></a></li>
+      {% else %}
+        <li class="active"><a href="/login/?next={{ request.path }}"> Login <span class="sr-only">(current)</span></a></li>
+      {% endif %}
+      </ul>
+
+  </div> <!--/end container-->
+  
+</nav>

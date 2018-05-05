@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block head_title %} Home {% endblock %}
+
+{% block content %}
+
+<link href="{% static 'css/hamath/basic.css' %}" rel="stylesheet">
+
+<div class="menu-container">
+	<div class="title">
+		<h3>
+			Welcome to Hamath
+		</h3>
+		<h3></h3>
+ 		<img src= "{% static 'images/home-page.gif' %}" alt="Hamath!" style="width:1000px;height:500px;">
+
+ 		<style>
+ 		h3{
+           color: #AED6F1
+ 		}
+ 		</style> 
+	</div>
+</div>
+
+{% endblock %}

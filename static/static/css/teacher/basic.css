@@ -1,0 +1,30 @@
+html, body {
+    background: radial-gradient(circle,#3498db,black);
+}
+.menu-container {
+    margin-top: 50;
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+    height: 500px;
+    background: transparent;
+    padding: 20px;
+}
+.title {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.buttons {
+    margin-top: 50px;
+    text-align:center;
+}
+.btn {
+    width: 200px;
+    height: 50px;
+    margin-top: 10px;
+}
+.access-denied-image {
+    text-align: center;
+    margin-top: 60px;
+}

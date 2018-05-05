@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block head_title %} {{ request.user.first_name }} (Teacher) {% endblock %}
+
+{% block content %}
+
+<link href="{% static 'css/teacher/basic.css' %}" rel="stylesheet">
+
+<div class="menu-container">
+	<div class="title">
+		<h3> Sorry, but you need to be a teacher to access this page </h3>
+	</div>
+    <div class="access-denied-image">
+        <img src= "{% static 'images/access_denied_lock.png' %}" alt="access-denied" style="width:270px;height:300px;">
+    </div>
+</div>
+
+{% endblock %}

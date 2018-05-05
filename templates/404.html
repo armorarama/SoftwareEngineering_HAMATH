@@ -1,0 +1,13 @@
+{% extends 'layout/layout.html' %}
+
+{% block title %} Page Not Found {% endblock %}
+
+{% block content %} 
+
+<h1> Page Not Found (404) </h1>
+
+<div class="to-signup">
+    <a href="{% url 'hamath.views.Home' %}" class="btn btn-success">Return To Home</a>
+</div>
+
+{% endblock %}

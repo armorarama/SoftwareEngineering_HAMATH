@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block head_title %} Signup {% endblock %}
+
+{% block content %} 
+
+<link href="{% static 'css/hamath/register.css' %}" rel="stylesheet">
+<link href="{% static 'css/hamath/register-header.css' %}" rel="stylesheet">
+<link href="{% static 'css/hamath/register-body.css' %}" rel="stylesheet">
+
+<div class="register-container">
+	<table border="1" style="background-color:#FFFFFF;border-collapse:collapse;border:1px solid #FFFFFF;color:#000000; width:360px;" cellpadding="3" cellspacing="3">
+		<tr>
+			<th>
+				<h3>Sign Up</h3>
+			</th>
+		</tr>
+	<div class="register-form">
+		<form action="" method="post">
+			{% csrf_token %}
+			<table border="1" style="background-color:#FFFFFF;border-collapse:collapse;border:1px solid #FFFFFF;color:#000000; width:200px;" cellpadding="3" cellspacing="3">
+					<div class="spacer"></div>
+					<tr>
+						<td>
+							<div class="register_div">
+								{% if form.username.errors %}<p class="error">{{ form.username.errors }}</p>{% endif %}
+								<p>{{ form.username }}</p>
+								<p><label for="username"{% if form.username.errors %} class="error"{% endif %}></label></p>
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td> 
+							<div class="register_div">
+								{% if form.first_name.errors %}<p class="error">{{ form.first_name.errors }}</p>{% endif %}
+								<p>{{ form.first_name }}</p>
+								<p><label for="first_name"{% if form.first_name.errors %} class="error"{% endif %}></label></p>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td> 
+							<div class="register_div">
+								{% if form.last_name.errors %}<p class="error">{{ form.last_name.errors }}</p>{% endif %}
+								<p>{{ form.last_name }}</p>
+								<p><label for="last_name"{% if form.last_name.errors %} class="error"{% endif %}></label></p>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td> 
+							<div class="register_div">
+								{% if form.email.errors %}<p class="error">{{ form.email.errors }}</p>{% endif %}
+								<p>{{ form.email }}</p>
+								<p><label for="email"{% if form.email.errors %} class="error"{% endif %}></label></p>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td> 
+							<div class="register_div">
+								{% if form.password.errors %}<p class="error">{{ form.password.errors }}</p>{% endif %}
+								<p>{{ form.password }}</p>
+								<p><label for="password"{% if form.password.errors %} class="error"{% endif %}></label></p>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td> 
+							<div class="register_div">
+								{% if form.password1.errors %}<p class="error">{{ form.password1.errors }}</p>{% endif %}
+								<p>{{ form.password1 }}</p>
+								<p><label for="password1"{% if form.password1.errors %} class="error"{% endif %}></label></p>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td> 
+							<div class="register_div">
+								<div id="check-box-label"><p> Are you a Teacher?</p></div>
+								<div id="check-box">
+									{% if form.is_applying_for_teacher_credentials.errors %}<p class="error">{{ form.is_applying_for_teacher_credentials.errors }}</p>{% endif %}
+									<p>{{ form.is_applying_for_teacher_credentials }}</p>
+									<p><label for="is_applying_for_teacher_credentials"{% if form.is_applying_for_teacher_credentials.errors %} class="error"{% endif %}></label> </p>
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="submit">
+								<p><input class="btn btn-primary" type="submit" value="Submit" alt="register"></p>
+							</div>
+						</td>
+					</tr>
+				</table>
+		</form>
+	</div>
+</div>
+
+{% endblock %}

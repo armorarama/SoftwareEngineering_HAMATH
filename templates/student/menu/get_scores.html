@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block head_title %} Get Scores {% endblock %}
+
+{% block content %} 
+
+<link href="{% static 'css/student/basic.css' %}" rel="stylesheet">
+<link href="{% static 'css/table.css' %}" rel="stylesheet">
+
+<div class="menu-container">
+	<div class="title">
+		<br><h3> Here are you top scores </h3>
+	</div>
+	<div>
+		<table border="1" style="background-color:#FFFFFF;border-collapse:collapse;border:none;color:#000000;width:100%" cellpadding="3" cellspacing="3">
+			<tr>
+                <th>Student Name</th>
+                <th>Rookie Mode</th>
+                <th>Intemediate Mode</th>
+                <th>Master Mode</th>
+            </tr>
+			<tr>
+				<td>{{ student_name }} </td>
+				<td> {{ rookie }} </td>
+				<td> {{ intermediate }} </td>
+				<td> {{ master }} </td>
+			</tr>
+		</table>
+</div>
+<div>
+
+<br><img src="{% static 'images/planet-earth.png' %}" alt= "" style= "width:500px; height:500px;" align="right">
+<br><img src="{% static 'images/enemies/1b.png' %}" alt= "" style= "width:100px; height:100px;" align="left">
+<br><br><br><img src="{% static 'images/enemies/3y.png' %}" alt= "" style= "width:150px; height:150px;" align="left">
+<br><br><br><img src="{% static 'images/enemies/1r.png' %}" alt= "" style= "width:100px; height:100px;" align="left">
+</div>
+
+{% endblock %}

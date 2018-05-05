@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block head_title %} How To Play {% endblock %}
+
+{% block content %} 
+
+<link href="{% static 'css/student/basic.css' %}" rel="stylesheet">
+
+<div class="menu-container">
+	<div class="how-to-play">
+		<div class="title">
+			<h3> How To Play </h3>
+			<br><img src= "{% static 'images/home-page.gif' %}" alt="Hamath!" align= "center" style="width:500;height:300px;">
+			<p></p>
+			<p></p>
+			<br><p><h4><i>Hamath is a game that is created to help you in you math classes. We hope that you will enjoy it as much as possible!</i><h4></p>
+			<p><h4> In order you to enjoy it, here is a list of tips how to play the game.<h4></p>
+			<br><h5><ul>
+				<li>Do not let the enemies touch the earth.</li>
+				<li>Give the right answer for the math problem in order to pass in the second level.</li>
+				<li>Use the mouse for moving around the enemies.</li>
+				<li>Use the keybord for numbers</li>
+				<li>Be aware that with the speed of the enemies increases while you go to higher levels of difficulties.</li> 
+			</h5></ul>
+			
+			<style>
+				h3, h4, h5{
+					color: #D6EAF8;  
+				}
+
+			</style>
+		</div>
+	</div>
+</div>
+{% endblock %}

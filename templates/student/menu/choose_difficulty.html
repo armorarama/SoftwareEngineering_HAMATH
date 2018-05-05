@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block head_title %} Choose Difficulty {% endblock %}
+
+{% block content %} 
+
+<link href="{% static 'css/student/basic.css' %}" rel="stylesheet">
+
+<div class="menu-container">
+	<div class="title">
+		<h3> Select Difficulty </h3>
+		<style>
+			h3{
+				text-shadow: 3px 3px #1C2833; 
+			}
+		</style>
+	</div>
+    <div class="description">
+        <p><h4><i> please choose an option from below </i></h4> </p>
+       
+        <style>
+        h4{
+        	color: #7FB3D5;
+        </style>
+    </div>
+	<div class=buttons>
+		<form action="{% url 'game.views.RookieMode' %}">
+		    <input class="btn btn-primary" type="submit" value="Rookie Mode">
+		</form>
+		<form action="{% url 'game.views.IntermediateMode' %}">
+		    <input class="btn btn-primary" type="submit" value="Intermediate Mode">
+		</form>
+		<form action="{% url 'game.views.MasterMode' %}">
+		    <input class="btn btn-primary" type="submit" value="Master Mode">
+		</form>
+	</div>
+	<div>
+	<img src="{% static 'images/enemies/1b.png' %}" alt= "" style= "width:200px; height:200px;" align="right">
+	<img src="{% static 'images/enemies/1r.png' %}" alt= "" style= "width:200px; height:200px;" align="left">
+
+	</div>
+</div>
+
+{% endblock %}

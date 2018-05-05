@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block head_title %} Contact {% endblock %}
+
+{% block content %}
+
+<link href="{% static 'css/hamath/basic.css' %}" rel="stylesheet">
+<div class="contact">
+<h1><i>Contact</i></h1>
+<form role="form" action="" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <p><input class="btn btn-primary" type="submit" value="Submit" alt="register"></p>
+</form>
+</div>
+
+
+{% endblock %}

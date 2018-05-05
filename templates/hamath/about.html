@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block head_title %} About {% endblock %}
+
+{% block content %}
+
+<link href="{% static 'css/hamath/basic.css' %}" rel="stylesheet">
+
+<div class="menu-container">
+	<div class="title">
+		<h1> About Us</h1>
+		<style>
+		table, th, td{
+			border: 1px transparent;
+			border-collapse: collapse;
+			align-items: center;
+		}
+		th, td{
+			padding: 15px;
+		}
+
+		h1{
+			color: #AED6F1;
+			text-align: center;
+			text-shadow: 2px 2px #2874A6  ;
+		}
+		h3{
+			color: #b3d9ff;
+		}
+
+		</style>
+		<table style="width: 100%">
+
+		<tr>
+		<td><img src="{% static 'images/henrique.jpg' %}" alt= "" style= "width:120px; height:120px;" align="left"><h3><i>Henrique</h3></i></td></h3>
+		<td><img src="{% static 'images/enemies/1b.png' %}" alt= "" style= "width:120px; height:120px;" align="bottom"></td>
+		</tr>
+		<tr><td><img src="{% static 'images/armora.jpg' %}" alt= "" style= "width:120px; height:120px;" align="left"><h3><i>Armora</h3></i></td>
+		<td></td>
+		<td><img src="{% static 'images/enemies/1r.png' %}" alt= "" style= "width:120px; height:120px;" align="bottom"></td>
+		</tr>
+		<tr><td><img src="{% static 'images/aidan.jpg' %}" alt= "" style= "width:120px; height:120px;" align="left"><h3><i>Aidan</h3></i></td>
+		<td><img src="{% static 'images/enemies/2y.png' %}" alt= "" style= "width:120px; height:120px;" align="bottom">
+		</tr>
+		<tr><td><img src="{% static 'images/merritt.jpg' %}" alt= "" style= "width:120px; height:120px;" align="left"><h3><i>Merritt</h3></i></td>
+		<td></td>
+		<td><img src="{% static 'images/enemies/3p.png' %}" alt= "" style= "width:120px; height:120px;" align="bottom"></td>
+		</tr>
+	</div>
+
+	</div id="acknowledgements">
+		<h4>
+ -           <a href="https://github.com/TheBigTeam/hamath-workspace/blob/master/acknowledgements.md">link to acknowledgements</a>
+ -      </h4>
+	</div>
+
+	<div id="version">
+        <h4>
+ -           Verison: {{ version }}
+ -      </h4>
+    </div>
+
+
+{% endblock %}

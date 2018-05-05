@@ -1,0 +1,44 @@
+html, body {
+    background: radial-gradient(circle,#3498db,black);
+}
+input {
+    display: block;
+    width: 180px;
+}
+.title {
+	padding: 20px;
+}
+.register-container {
+    margin-top: 50;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    background: white;
+    padding: 20px;
+}
+.register-form {
+    text-align: center;
+}
+.register_div {
+    margin-left: 90px;
+}
+.submit {
+    margin-left: 90px;
+    margin-bottom: 10px;
+}
+.to-signup {
+    margin-left: 90px;
+	margin-top: 20;
+}
+.btn{
+    width: 180px;
+}
+#check-box-label {
+    text-align: right;
+    text-align: bottom;
+    /*margin-top: -;*/
+    z-index: -100;
+}
+#check-box {
+    margin-top: -25;
+}
